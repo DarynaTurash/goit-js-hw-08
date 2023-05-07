@@ -1,7 +1,7 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 import SimpleLightbox from "simplelightbox";
-import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm";
+import "simplelightbox/dist/simple-lightbox.esm";
 // Change code below this line
 const refs = {
     galleryList: document.querySelector('.gallery'),
@@ -19,7 +19,7 @@ function makingGalleryMarkUp(galleryItems) {
 
 refs.galleryList.insertAdjacentHTML('beforeend', makingGalleryMarkUp(galleryItems));
 
-const lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: '250' });
+const lightbox = new SimpleLightbox('.gallery', { captionsData: 'alt', captionDelay: '250' });
 
 console.log(galleryItems);
 
