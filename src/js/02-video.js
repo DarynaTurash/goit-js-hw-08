@@ -13,15 +13,7 @@ const onPlay = function(data) {
 
 player.on('timeupdate', throttle(onPlay, 1000));
 
-player.setCurrentTime(timeFromLocalStorage).catch(function(error) {
-    switch (error.name) {
-        case 'RangeError':
-        break;
-
-        default:
-        break;
-    }
-});
+player.setCurrentTime(timeFromLocalStorage);
 
 player.getVideoTitle().then(function(title) {
     console.log('title:', title);
