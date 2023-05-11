@@ -41,5 +41,7 @@ function onResetForm(evt) {
         localStorage.removeItem(LOCAL_STORAGE_KEY);
         evt.currentTarget.reset();
         console.log(userFeedbackData);
+        userFeedbackData.email = '';
+        userFeedbackData.message = '';
     }
 }
